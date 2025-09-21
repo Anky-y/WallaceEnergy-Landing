@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { MessageCircle, Send, X, Minimize2 } from "lucide-react"
+import { MessageCircle, Send, X } from "lucide-react"
 
 interface Message {
   id: string
@@ -121,22 +121,22 @@ export function AISalesChatbox() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {!isOpen ? (
         <Button
           onClick={() => setIsOpen(true)}
           size="lg"
-          className="h-16 w-16 rounded-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
+          className="h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
         >
-          <MessageCircle className="h-8 w-8 group-hover:scale-110 transition-transform" />
-          <div className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full animate-pulse" />
+          <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 group-hover:scale-110 transition-transform" />
+          <div className="absolute -top-1 -right-1 h-3 w-3 sm:h-4 sm:w-4 bg-red-500 rounded-full animate-pulse" />
         </Button>
       ) : (
-        <Card className="w-96 h-[500px] shadow-2xl border-0 bg-background/95 backdrop-blur-sm">
-          <CardHeader className="flex flex-row items-center justify-between p-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground">
+        <Card className="w-[calc(100vw-2rem)] sm:w-96 h-[70vh] sm:h-[500px] max-h-[600px] shadow-2xl border-0 bg-background/95 backdrop-blur-sm">
+          <CardHeader className="flex flex-row items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground">
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 bg-green-400 rounded-full animate-pulse" />
-              <h3 className="font-semibold text-white">EV Charging Specialist</h3>
+              <h3 className="font-semibold text-white text-sm sm:text-base">EV Charging Specialist</h3>
             </div>
             <div className="">
               <Button
@@ -151,11 +151,11 @@ export function AISalesChatbox() {
           </CardHeader>
 
           {!isMinimized && (
-            <CardContent className="p-0 flex flex-col h-[calc(500px-73px)]">
+            <CardContent className="p-0 flex flex-col h-[calc(70vh-57px)] sm:h-[calc(500px-73px)]">
               {/* Messages Container */}
               <div
                 ref={chatContainerRef}
-                className="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth"
+                className="flex-1 overflow-y-auto p-2 sm:p-4 space-y-4 scroll-smooth"
                 style={{ maxHeight: "calc(100% - 80px)" }}
               >
                 {messages.map((message) => (
@@ -164,13 +164,13 @@ export function AISalesChatbox() {
                     className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
                   >
                     <div
-                      className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                      className={`max-w-[85%] sm:max-w-[80%] rounded-lg px-3 py-2 sm:px-4 sm:py-2 ${
                         message.sender === "user"
-                          ? "bg-primary text-primary-foreground ml-4"
-                          : "bg-muted text-foreground mr-4"
+                          ? "bg-primary text-primary-foreground ml-2 sm:ml-4"
+                          : "bg-muted text-foreground mr-2 sm:mr-4"
                       }`}
                     >
-                      <p className="text-sm leading-relaxed">{message.content}</p>
+                      <p className="text-xs sm:text-sm leading-relaxed">{message.content}</p>
                       <p
                         className={`text-xs mt-1 opacity-70 ${
                           message.sender === "user" ? "text-primary-foreground/70" : "text-muted-foreground"
@@ -184,7 +184,7 @@ export function AISalesChatbox() {
 
                 {isLoading && (
                   <div className="flex justify-start">
-                    <div className="bg-muted text-foreground rounded-lg px-4 py-2 mr-4">
+                    <div className="bg-muted text-foreground rounded-lg px-3 py-2 sm:px-4 sm:py-2 mr-2 sm:mr-4">
                       <div className="flex items-center gap-1">
                         <div className="w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce" />
                         <div
@@ -202,7 +202,7 @@ export function AISalesChatbox() {
               </div>
 
               {/* Input Container */}
-              <div className="border-t bg-background p-4 mx-0 my-0 px-4">
+              <div className="border-t bg-background p-2 sm:p-4 mx-0 my-0">
                 <div className="flex gap-2">
                   <Input
                     value={inputValue}
@@ -210,7 +210,7 @@ export function AISalesChatbox() {
                     onKeyPress={handleKeyPress}
                     placeholder="Type your message..."
                     disabled={isLoading}
-                    className="flex-1"
+                    className="flex-1 text-sm sm:text-base"
                   />
                   <Button
                     onClick={handleSendMessage}
