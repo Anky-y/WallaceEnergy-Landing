@@ -138,15 +138,7 @@ export function AISalesChatbox() {
               <div className="h-3 w-3 bg-green-400 rounded-full animate-pulse" />
               <h3 className="font-semibold text-white">EV Charging Specialist</h3>
             </div>
-            <div className="flex items-center gap-1">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setIsMinimized(!isMinimized)}
-                className="h-8 w-8 p-0 text-white hover:bg-white/20"
-              >
-                <Minimize2 className="h-4 w-4" />
-              </Button>
+            <div className="">
               <Button
                 variant="ghost"
                 size="sm"
