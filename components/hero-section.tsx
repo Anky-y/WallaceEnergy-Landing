@@ -48,15 +48,15 @@ export function HeroSection() {
           {/* Professional Trust Indicators */}
           <div className="flex flex-wrap justify-center items-center gap-8 text-muted-foreground mb-16 text-xl">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <div className="w-2 h-2 bg-secondary rounded-full"></div>
               200+ Successful Installations
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <div className="w-2 h-2 bg-secondary rounded-full"></div>
               $10M+ Revenue Generated
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <div className="w-2 h-2 bg-secondary rounded-full"></div>
               Limited Time Incentives
             </div>
           </div>

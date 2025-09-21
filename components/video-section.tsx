@@ -26,8 +26,6 @@ export function VideoSection() {
               poster="/placeholder.svg?height=600&width=800"
               playsInline
               muted
-              autoPlay
-              loop
             >
               <source
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback-vnCJ6SNCkI2gJv8DCSqq8kSEKg9Ecd.mp4"

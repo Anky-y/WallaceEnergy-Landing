@@ -8,6 +8,7 @@ import { ReviewsSection } from "@/components/reviews-section"
 import { TeamSection } from "@/components/team-section"
 import { ExclusivitySection } from "@/components/exclusivity-section"
 import { BookingSection } from "@/components/booking-section"
+import { AISalesChatbox } from "@/components/ai-sales-chatbox"
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <TeamSection />
       <ExclusivitySection />
       <BookingSection />
+      <AISalesChatbox />
     </main>
   )
 }
