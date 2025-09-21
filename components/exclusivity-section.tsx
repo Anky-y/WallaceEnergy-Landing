@@ -96,7 +96,10 @@ export function ExclusivitySection() {
             </div>
           </div>
 
-          <Button size="lg" className="text-xl px-12 py-6 bg-primary hover:bg-primary/90">
+          <Button
+            size="lg"
+            className="text-lg md:text-xl px-6 md:px-12 py-4 md:py-6 bg-primary hover:bg-primary/90 w-full sm:w-auto"
+          >
             Schedule Strategic Consultation
           </Button>
 

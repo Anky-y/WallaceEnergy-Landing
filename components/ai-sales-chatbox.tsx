@@ -145,7 +145,7 @@ export function AISalesChatbox() {
                 onClick={() => setIsMinimized(!isMinimized)}
                 className="h-8 w-8 p-0 text-white hover:bg-white/20"
               >
-                
+                <Minimize2 className="h-4 w-4" />
               </Button>
               <Button
                 variant="ghost"
