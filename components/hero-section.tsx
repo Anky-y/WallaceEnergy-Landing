@@ -20,7 +20,7 @@ export function HeroSection() {
 
             <p className="text-xl md:text-2xl text-muted-foreground text-balance mb-8 max-w-3xl mx-auto">
               {
-                "Cut your electric bills, boost property value, and earn long-term passive income. Act now and government incentives can cover most installation costs for a limited time!"
+                "boost property value, and earn long-term passive income. Act now and government incentives can cover most installation costs for a limited time!"
               }
             </p>
 
