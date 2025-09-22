@@ -1,31 +1,30 @@
-# Wallace Energy Solutions
+# New page inspiration
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://wallaceenergy.com)
+*Automatically synced with your [v0.app](https://v0.app) deployments*
+
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/samuelgs300-6772s-projects/v0-new-page-inspiration)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/qVcMApRdqrT)
 
 ## Overview
 
-Wallace Energy Solutions helps commercial property owners unlock new revenue streams and maximize property value with turnkey EV charging infrastructure.
+This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
+Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
 
 ## Deployment
 
 Your project is live at:
 
-**[https://wallaceenergy.com](https://wallaceenergy.com)**
+**[https://vercel.com/samuelgs300-6772s-projects/v0-new-page-inspiration](https://vercel.com/samuelgs300-6772s-projects/v0-new-page-inspiration)**
 
-## Build & Develop
+## Build your app
 
-- Clone this repository
-- Install dependencies: `npm install`
-- Run locally: `npm run dev`
-- Deploy to your preferred platform
+Continue building your app on:
+
+**[https://v0.app/chat/projects/qVcMApRdqrT](https://v0.app/chat/projects/qVcMApRdqrT)**
 
 ## How It Works
 
-1. Book a strategy call with our team
-2. Receive a custom site assessment and revenue projection
-3. We handle design, incentives, and installation
-4. Start generating new revenue from your property
-
----
-
-For more information, visit [wallaceenergy.com](https://wallaceenergy.com)
+1. Create and modify your project using [v0.app](https://v0.app)
+2. Deploy your chats from the v0 interface
+3. Changes are automatically pushed to this repository
+4. Vercel deploys the latest version from this repository

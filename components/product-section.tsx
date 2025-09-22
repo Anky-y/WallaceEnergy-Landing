@@ -62,7 +62,7 @@ export function ProductSection() {
             <CardHeader className="pb-4">
               <div className="w-full h-80 rounded-lg mb-6 overflow-hidden bg-muted">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/EVDANCEEVPortableCharger32A%281%29%281%29%281%29-ote3saKJPjS7KBH5ncwqwwR7HHSorU.jpg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/EVDANCEEVPortableCharger32A%281%29%281%29%281%29%281%29-Sgpnau789KKvVsGwHwMhVubiEexral.jpg"
                   alt="DC Fast Charging Station"
                   className="w-full h-full object-contain object-center"
                 />

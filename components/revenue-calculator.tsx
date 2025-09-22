@@ -204,11 +204,16 @@ export function RevenueCalculator() {
                       Financing Available: Start generating revenue immediately with $0 down payment plans
                     </p>
                   </div>
-
-                  <Button size="lg" className="text-lg px-8 py-6">
+             <a
+                href="https://api.leadconnectorhq.com/widget/booking/TZJdD8KEnoXd1a4m97dL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                 <Button size="lg" className="text-lg px-8 py-6">
                     Book a Call
                     <TrendingUp className="ml-2 w-5 h-5" />
-                  </Button>
+                  </Button>              </a>
+
                 </div>
               </div>
             </div>
