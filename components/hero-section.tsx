@@ -4,7 +4,7 @@ import { ArrowRight, Zap, TrendingUp } from "lucide-react"
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-24 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Professional Hook */}
           <div className="mb-8">
