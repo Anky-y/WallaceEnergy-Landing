@@ -23,7 +23,7 @@ export function VideoSection() {
               className="w-full h-full object-cover"
               preload="auto"
               poster="/placeholder.svg?height=600&width=800"
-              autoplay
+              autoPlay
               playsInline
               muted
               loop
