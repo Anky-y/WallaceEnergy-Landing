@@ -21,11 +21,12 @@ export function VideoSection() {
             {/* Video Placeholder */}
             <video
               className="w-full h-full object-cover"
-              controls
               preload="auto"
               poster="/placeholder.svg?height=600&width=800"
+              autoplay
               playsInline
               muted
+              loop
             >
               <source
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback-vnCJ6SNCkI2gJv8DCSqq8kSEKg9Ecd.mp4"
