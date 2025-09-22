@@ -41,7 +41,7 @@ export function BookingSection() {
                 <h3 className="text-2xl font-bold mb-6">Book Your Strategy Call</h3>
                 <div className="w-full">
                   <iframe
-                    src="https://api.leadconnectorhq.com/widget/booking/JzIjRCGcT0ub3anLQjai"
+                    src="https://api.leadconnectorhq.com/widget/booking/TZJdD8KEnoXd1a4m97dL"
                     style={{
                       width: "100%",
                       border: "none",
@@ -49,7 +49,7 @@ export function BookingSection() {
                       minHeight: "600px",
                     }}
                     scrolling="no"
-                    id="JzIjRCGcT0ub3anLQjai_1758530787369"
+                    id="TZJdD8KEnoXd1a4m97dL_1758533772935"
                     title="Book Strategy Call"
                   />
                 </div>
@@ -127,11 +127,11 @@ export function BookingSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button variant="outline" size="lg">
                 <Phone className="w-5 h-5 mr-2" />
-                (555) 123-4567
+                786-751-4139
               </Button>
               <Button variant="outline" size="lg">
                 <Mail className="w-5 h-5 mr-2" />
-                hello@evchargingpros.com
+                info@myownchargingstation.com
               </Button>
             </div>
           </div>

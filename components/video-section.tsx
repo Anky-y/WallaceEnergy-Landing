@@ -56,7 +56,7 @@ export function VideoSection() {
           <div className="text-center">
             <Button size="lg" className="text-lg px-8 py-6" asChild>
               <a
-                href="https://api.leadconnectorhq.com/widget/booking/JzIjRCGcT0ub3anLQjai"
+                href="https://api.leadconnectorhq.com/widget/booking/TZJdD8KEnoXd1a4m97dL"
                 target="_blank"
                 rel="noopener noreferrer"
               >

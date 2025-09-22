@@ -35,7 +35,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button size="lg" className="text-lg px-8 py-4 bg-primary hover:bg-primary/90" asChild>
               <a
-                href="https://api.leadconnectorhq.com/widget/booking/JzIjRCGcT0ub3anLQjai"
+                href="https://api.leadconnectorhq.com/widget/booking/TZJdD8KEnoXd1a4m97dL"
                 target="_blank"
                 rel="noopener noreferrer"
               >

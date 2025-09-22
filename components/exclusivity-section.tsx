@@ -102,7 +102,7 @@ export function ExclusivitySection() {
             asChild
           >
             <a
-              href="https://api.leadconnectorhq.com/widget/booking/JzIjRCGcT0ub3anLQjai"
+              href="https://api.leadconnectorhq.com/widget/booking/TZJdD8KEnoXd1a4m97dL"
               target="_blank"
               rel="noopener noreferrer"
             >
