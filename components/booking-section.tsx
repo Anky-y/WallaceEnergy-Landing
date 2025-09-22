@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Calendar, Phone, Mail, MapPin } from "lucide-react"
 
 export function BookingSection() {
@@ -41,20 +39,20 @@ export function BookingSection() {
             <Card className="p-8">
               <CardContent className="p-0">
                 <h3 className="text-2xl font-bold mb-6">Book Your Strategy Call</h3>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Input placeholder="First Name" />
-                    <Input placeholder="Last Name" />
-                  </div>
-                  <Input placeholder="Business Name" />
-                  <Input placeholder="Email Address" type="email" />
-                  <Input placeholder="Phone Number" type="tel" />
-                  <Input placeholder="Business Address" />
-                  <Textarea placeholder="Tell us about your business and current challenges..." rows={4} />
-                  <Button size="lg" className="w-full text-lg py-6">
-                    Book My Free Strategy Call
-                  </Button>
-                </form>
+                <div className="w-full">
+                  <iframe
+                    src="https://api.leadconnectorhq.com/widget/booking/JzIjRCGcT0ub3anLQjai"
+                    style={{
+                      width: "100%",
+                      border: "none",
+                      overflow: "hidden",
+                      minHeight: "600px",
+                    }}
+                    scrolling="no"
+                    id="JzIjRCGcT0ub3anLQjai_1758530787369"
+                    title="Book Strategy Call"
+                  />
+                </div>
                 <p className="text-xs text-muted-foreground mt-4 text-center">
                   {"We respect your privacy. Your information will never be shared."}
                 </p>

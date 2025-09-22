@@ -54,8 +54,14 @@ export function VideoSection() {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="text-lg px-8 py-6">
-              Get Your Custom Strategy Call
+            <Button size="lg" className="text-lg px-8 py-6" asChild>
+              <a
+                href="https://api.leadconnectorhq.com/widget/booking/JzIjRCGcT0ub3anLQjai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Your Custom Strategy Call
+              </a>
             </Button>
             <p className="text-sm text-muted-foreground mt-4">
               {"See how we can replicate Sarah's success for your business"}

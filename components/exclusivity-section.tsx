@@ -99,8 +99,15 @@ export function ExclusivitySection() {
           <Button
             size="lg"
             className="text-lg md:text-xl px-6 md:px-12 py-4 md:py-6 bg-primary hover:bg-primary/90 w-full sm:w-auto"
+            asChild
           >
-            Schedule Strategic Consultation
+            <a
+              href="https://api.leadconnectorhq.com/widget/booking/JzIjRCGcT0ub3anLQjai"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule Strategic Consultation
+            </a>
           </Button>
 
           <p className="text-sm text-muted-foreground mt-4">

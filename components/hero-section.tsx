@@ -19,7 +19,9 @@ export function HeroSection() {
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground text-balance mb-8 max-w-3xl mx-auto">
-              {"Cut your electric bills, boost property value, and earn long-term passive income. Act now and government incentives can cover most installation costs for a limited time!"}
+              {
+                "Cut your electric bills, boost property value, and earn long-term passive income. Act now and government incentives can cover most installation costs for a limited time!"
+              }
             </p>
 
             <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
@@ -31,9 +33,15 @@ export function HeroSection() {
 
           {/* Professional CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button size="lg" className="text-lg px-8 py-4 bg-primary hover:bg-primary/90">
-              Schedule Consultation
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button size="lg" className="text-lg px-8 py-4 bg-primary hover:bg-primary/90" asChild>
+              <a
+                href="https://api.leadconnectorhq.com/widget/booking/JzIjRCGcT0ub3anLQjai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Schedule Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
             <Button
               variant="outline"
