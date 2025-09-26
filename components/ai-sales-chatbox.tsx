@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { MessageCircle, Send, X } from "lucide-react"
+import ReactMarkdown from "react-markdown"
 
 interface Message {
   id: string
@@ -29,7 +30,9 @@ export function AISalesChatbox() {
   ])
   const [inputValue, setInputValue] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const [pendingMessage, setPendingMessage] = useState("")
   const chatContainerRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   // Generate a random session ID once per session
   const sessionIDRef = useRef<string>(
@@ -46,6 +49,12 @@ export function AISalesChatbox() {
     scrollToBottom()
   }, [messages])
 
+  useEffect(() => {
+    if (isLoading && inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, [isLoading])
+
   const handleSendMessage = async () => {
     if (!inputValue.trim() || isLoading) return
 
@@ -57,6 +66,7 @@ export function AISalesChatbox() {
     }
 
     setMessages((prev) => [...prev, userMessage])
+    setPendingMessage(inputValue)
     setInputValue("")
     setIsLoading(true)
 
@@ -92,12 +102,14 @@ export function AISalesChatbox() {
 
       setMessages((prev) => [...prev, assistantMessage])
       setIsLoading(false)
+      setPendingMessage("")
     } catch (error) {
       console.error("Error sending message:", error)
       if (typeof error === "object" && error !== null && "content" in error) {
         console.error("ERROR CONTENT:", error.content)
       }
       setIsLoading(false)
+      setPendingMessage("")
 
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -110,9 +122,11 @@ export function AISalesChatbox() {
   }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && !e.shiftKey && !isLoading) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault()
-      handleSendMessage()
+      if (!isLoading) {
+        handleSendMessage()
+      }
     }
   }
 
@@ -170,7 +184,13 @@ export function AISalesChatbox() {
                           : "bg-muted text-foreground mr-2 sm:mr-4"
                       }`}
                     >
-                      <p className="text-xs sm:text-sm leading-relaxed">{message.content}</p>
+                      {message.sender === "assistant" ? (
+                        <div className="text-xs sm:text-sm leading-relaxed prose prose-sm max-w-none prose-p:my-1 prose-ul:my-1 prose-li:my-0">
+                          <ReactMarkdown>{message.content}</ReactMarkdown>
+                        </div>
+                      ) : (
+                        <p className="text-xs sm:text-sm leading-relaxed">{message.content}</p>
+                      )}
                       <p
                         className={`text-xs mt-1 opacity-70 ${
                           message.sender === "user" ? "text-primary-foreground/70" : "text-muted-foreground"
@@ -205,11 +225,11 @@ export function AISalesChatbox() {
               <div className="border-t bg-background p-2 sm:p-4 mx-0 my-0">
                 <div className="flex gap-2">
                   <Input
+                    ref={inputRef}
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Type your message..."
-                    disabled={isLoading}
+                    placeholder={isLoading ? "AI is responding... (you can type ahead)" : "Type your message..."}
                     className="flex-1 text-sm sm:text-base"
                   />
                   <Button
